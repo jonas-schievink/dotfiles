@@ -1,33 +1,39 @@
-function fuck -d 'Correct your previous console command'
-    set -l exit_code $status
-    set -l eval_script (mktemp 2>/dev/null ; or mktemp -t 'thefuck')
-    set -l fucked_up_commandd $history[1]
-    thefuck $fucked_up_commandd > $eval_script
-    . $eval_script
-    rm $eval_script
-    if test $exit_code -ne 0
-        history --delete $fucked_up_commandd
-    end
-end
+eval (thefuck --alias | tr '\n' ';')
 
-set -x PATH /usr/local/bin /usr/bin /usr/bin/core_perl /opt/android-sdk/platform-tools ~/.local/bin
+set PATH ~/.cargo/bin ~/.multirust/bin ~/.local/bin $PATH
 
-set -x ANDROID_HOME /opt/android-sdk
-set -x NDK_HOME /opt/android-ndk
+set -x EDITOR vim
 
+set -x RUST_BACKTRACE 1
+set -x RUST_SRC_PATH "$HOME/dev/rust/src"
 set -x RUST_NEW_ERROR_FORMAT true
 
 set -x PSPDEV /usr/local/pspdev
 set -x PATH $PATH $PSPDEV/bin
 
-set -x LC_COLLATE C
-set -x LANG en_US.UTF-8
+set -x ANDROID_HOME /opt/android-sdk
+set -x NDK_HOME /opt/android-ndk
 
+set -x LD /usr/bin/ld.gold
 set -x CC /usr/bin/clang
 set -x CXX /usr/bin/clang++
 
-# unfuck ~
-set -x XDG_CONFIG_HOME "$HOME/.config"
-set -x WEECHAT_HOME "$XDG_CONFIG_HOME"/weechat
-set -x MPLAYER_HOME "$XDG_CONFIG_HOME"/mplayer
+# get rid of the annoying greeting
+set fish_greeting
+
+# make ssh-agent usable
+# FIXME
+#set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
+#set -x SSH_AUTH_SOCK ~/.config/gnupg/S.gpg-agent.ssh
+
+# make 'less' pass colors through
+alias 'less' 'less -R'
+alias 'dmesg' 'dmesg --color=always'
+
+
+# XDG workarounds
+set -x MPLAYER_HOME ~/.config/mplayer
+set -x GNUPGHOME ~/.config/gnupg
+set -x LESSHISTFILE ~/.cache/less/hist
+alias 'svn' "svn --config-dir ~/.config/subversion"
 
