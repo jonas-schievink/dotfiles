@@ -7,10 +7,6 @@ URxvt.scrollBack: false
 URxvt.scrollBar: false
 URxvt.scrollstyle: plain
 
-URxvt.foreground: gray
-URxvt.background: black
-URxvt.font: xft:Noto Mono:pixelsize=16
-
 URxvt.urlLauncher: google-chrome-stable
 URxvt.urgentOnBell: true
 
@@ -21,5 +17,12 @@ URxvt.keysym.Control-Left:  \033[1;5D
 URxvt.keysym.Control-Right: \033[1;5C
 
 ! vtwheel enables better mouse wheel scrolling (eg. when inside an editor)
+! FIXME: Figure out if this even does something
 URxvt.perl-ext-common: vtwheel
+
+! Include host-specific Xresources
+#include "host"
+
+! Include solarized color definitions
+#include "solarized"
 
