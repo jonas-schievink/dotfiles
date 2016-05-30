@@ -1,6 +1,6 @@
 eval (thefuck --alias | tr '\n' ';')
 
-set PATH ~/.cargo/bin ~/.multirust/bin ~/.local/bin $PATH
+set PATH ~/.local/bin $PATH
 
 set -x EDITOR vim
 
