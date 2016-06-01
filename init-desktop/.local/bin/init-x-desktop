@@ -5,7 +5,8 @@
 # work required only on X11 but not on Wayland.
 
 # "No Tears"
-compton --no-fading-openclose -b
+# Curiously, `-b` to daemonize compton doesn't work and gives GL errors
+compton --no-fading-openclose &
 
 # FIXME: Does unclutter work on Wayland? If not, get a replacement!
 # Without -noevents, Chrome stops reacting to scroll events when the cursor is
