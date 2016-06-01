@@ -17,8 +17,8 @@ unclutter -idle 2 -noevents &
 xmodmap ~/.config/X11/Xmodmap
 xrdb -merge ~/.config/X11/Xresources
 
-# 250ms delay, 20 Hz repeat rate
-xset r rate 250 30
+# Delay in milliseconds, repeat rate in Hz
+xset r rate 220 40
 
 # Disable screen standby (DPMS)
 xset dpms 0 0 0
