@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Script to initialize my desktop session when using a window manager
+# and not a DE.
+# Should be kept X11/Wayland agnostic.
+# Basically, an "Autostart" file.
+
+pasystray &
+dunst &
+dropbox &
+
+# HACK: mount /boot in here
+# FIXME: Figure out if this is still necessary
+sudo mount /boot
+

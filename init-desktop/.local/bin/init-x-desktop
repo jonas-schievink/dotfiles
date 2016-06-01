@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Script to initialize an X11 session
+# This is run in addition to `init-session` for X11 sessions, and should do any
+# work required only on X11 but not on Wayland.
+
+# "No Tears"
+compton --no-fading-openclose -b
+
+# FIXME: Does unclutter work on Wayland? If not, get a replacement!
+# Without -noevents, Chrome stops reacting to scroll events when the cursor is
+# hidden.
+# This still has a bug where occasionally the window focus jumps back to the
+# where the (invisible) mouse is hovering over.
+unclutter -idle 2 -noevents &
+
+xmodmap ~/.config/X11/Xmodmap
+xrdb -merge ~/.config/X11/Xresources
+
+# 250ms delay, 20 Hz repeat rate
+xset r rate 250 30
+
+# Disable screen standby (DPMS)
+xset dpms 0 0 0
+xset s off
+
