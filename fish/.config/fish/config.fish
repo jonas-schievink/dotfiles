@@ -5,8 +5,9 @@ set PATH ~/.local/bin $PATH
 set -x EDITOR vim
 
 set -x RUST_BACKTRACE 1
-set -x RUST_SRC_PATH "$HOME/dev/rust/src"
+set -x RUST_SRC_PATH ~/dev/rust/src
 set -x RUST_NEW_ERROR_FORMAT true
+set -x PATH $PATH ~/.cargo/bin  # needed for rustup to work
 
 set -x PSPDEV /usr/local/pspdev
 set -x PATH $PATH $PSPDEV/bin
