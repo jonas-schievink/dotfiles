@@ -3,7 +3,7 @@ Description=SSH-Agent
 
 [Service]
 Type=simple
-Environment=RUST_LOG=INFO
+Environment=RUST_LOG=INFO DISPLAY=:0
 ExecStart=/home/jonas/.local/bin/smith -a %t/smith.socket
 # FIXME This will break when restarting it
 
