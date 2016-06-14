@@ -1,3 +1,7 @@
+# Oh My Fish init
+set -gx OMF_PATH "/home/jonas/.local/share/omf"
+source $OMF_PATH/init.fish
+
 eval (thefuck --alias | tr '\n' ';')
 
 set PATH ~/.local/bin $PATH
@@ -23,9 +27,7 @@ set -x CXX /usr/bin/clang++
 set fish_greeting
 
 # make ssh-agent usable
-# FIXME
-#set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/ssh-agent.socket"
-#set -x SSH_AUTH_SOCK ~/.config/gnupg/S.gpg-agent.ssh
+set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/smith.socket"
 
 # make 'less' pass colors through
 alias 'less' 'less -R'
@@ -34,7 +36,7 @@ alias 'dmesg' 'dmesg --color=always'
 
 # XDG workarounds
 set -x MPLAYER_HOME ~/.config/mplayer
-set -x GNUPGHOME ~/.config/gnupg
+#set -x GNUPGHOME ~/.config/gnupg # FIXME this one breaks everything
 set -x LESSHISTFILE ~/.cache/less/hist
 alias 'svn' "svn --config-dir ~/.config/subversion"
 
