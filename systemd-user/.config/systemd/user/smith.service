@@ -1,0 +1,12 @@
+[Unit]
+Description=SSH-Agent
+
+[Service]
+Type=simple
+Environment=RUST_LOG=INFO
+ExecStart=/home/jonas/.local/bin/smith -a %t/smith.socket
+# FIXME This will break when restarting it
+
+[Install]
+WantedBy=default.target
+
