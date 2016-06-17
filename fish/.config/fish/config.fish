@@ -33,6 +33,13 @@ set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/smith.socket"
 alias 'less' 'less -R'
 alias 'dmesg' 'dmesg --color=always'
 
+# git aliases
+alias 'g-co' 'git checkout'
+alias 'g-newbranch' 'git checkout -b'
+alias 'g-ca' 'git commit -a'
+alias 'g-log' 'git log --oneline -n20'
+alias 'g-aa' 'git add -A'
+alias 'g-s' 'git status'
 
 # XDG workarounds
 set -x MPLAYER_HOME ~/.config/mplayer
