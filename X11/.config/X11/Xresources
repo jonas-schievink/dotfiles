@@ -2,7 +2,7 @@ Xft.antialias: 1
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault
 
-URxvt.saveLines: 1000
+URxvt.saveLines: 10000
 URxvt.scrollBack: false
 URxvt.scrollBar: false
 URxvt.scrollstyle: plain
