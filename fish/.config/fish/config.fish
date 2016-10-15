@@ -7,6 +7,7 @@ eval (thefuck --alias | tr '\n' ';')
 set PATH ~/.local/bin $PATH
 
 set -x EDITOR vim
+set -x VISUAL $EDITOR
 
 set -x PATH $PATH ~/.cargo/bin  # needed for rustup to work
 
