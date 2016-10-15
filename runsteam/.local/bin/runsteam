@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -x
+
+# Runs steam-native as user steam and allows access to X11
+
+# Requires a properly set up sudoers file so that no password prompt will be shown
+
+xhost +local:
+sudo -u steam steam-native
+
