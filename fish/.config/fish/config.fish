@@ -8,7 +8,6 @@ set PATH ~/.local/bin $PATH
 
 set -x EDITOR vim
 
-set -x RUST_SRC_PATH ~/dev/rust/src
 set -x PATH $PATH ~/.cargo/bin  # needed for rustup to work
 
 set -x ANDROID_HOME /opt/android-sdk
@@ -43,4 +42,3 @@ set -x MPLAYER_HOME ~/.config/mplayer
 #set -x GNUPGHOME ~/.config/gnupg # FIXME this one breaks everything
 set -x LESSHISTFILE ~/.cache/less/hist
 alias 'svn' "svn --config-dir ~/.config/subversion"
-
