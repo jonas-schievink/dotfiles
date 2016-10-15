@@ -8,9 +8,7 @@ set PATH ~/.local/bin $PATH
 
 set -x EDITOR vim
 
-set -x RUST_BACKTRACE 1
 set -x RUST_SRC_PATH ~/dev/rust/src
-set -x RUST_NEW_ERROR_FORMAT true
 set -x PATH $PATH ~/.cargo/bin  # needed for rustup to work
 
 set -x ANDROID_HOME /opt/android-sdk
@@ -25,6 +23,8 @@ set fish_greeting
 
 # make ssh-agent usable
 set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/smith.socket"
+
+alias 'beep' 'notify-send "BEEP" "Pinged from shell."'
 
 # make 'less' pass colors through
 alias 'less' 'less -R'
