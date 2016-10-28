@@ -30,6 +30,9 @@ alias 'beep' 'notify-send "BEEP" "Pinged from shell."'
 alias 'less' 'less -R'
 alias 'dmesg' 'dmesg --color=always'
 
+# btrfs/CoW support aliases
+alias 'cp' 'cp --reflink=always'
+
 # git aliases
 alias 'g-co' 'git checkout'
 alias 'g-newbranch' 'git checkout -b'
