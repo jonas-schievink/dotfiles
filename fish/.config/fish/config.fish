@@ -9,8 +9,6 @@ set PATH ~/.local/bin $PATH
 set -x EDITOR vim
 set -x VISUAL $EDITOR
 
-set -x PATH $PATH ~/.cargo/bin  # needed for rustup to work
-
 set -x ANDROID_HOME /opt/android-sdk
 set -x NDK_HOME /opt/android-ndk
 
@@ -33,16 +31,9 @@ alias 'dmesg' 'dmesg --color=always'
 # btrfs/CoW support aliases
 alias 'cp' 'cp --reflink=always'
 
-# git aliases
-alias 'g-co' 'git checkout'
-alias 'g-newbranch' 'git checkout -b'
-alias 'g-ca' 'git commit -a'
-alias 'g-log' 'git log --oneline -n20'
-alias 'g-aa' 'git add -A'
-alias 'g-s' 'git status'
-
 # XDG workarounds
 set -x MPLAYER_HOME ~/.config/mplayer
 #set -x GNUPGHOME ~/.config/gnupg # FIXME this one breaks everything
 set -x LESSHISTFILE ~/.cache/less/hist
 alias 'svn' "svn --config-dir ~/.config/subversion"
+
