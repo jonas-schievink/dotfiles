@@ -31,9 +31,3 @@ alias 'dmesg' 'dmesg --color=always'
 # btrfs/CoW support aliases
 alias 'cp' 'cp --reflink=always'
 
-# XDG workarounds
-set -x MPLAYER_HOME ~/.config/mplayer
-#set -x GNUPGHOME ~/.config/gnupg # FIXME this one breaks everything
-set -x LESSHISTFILE ~/.cache/less/hist
-alias 'svn' "svn --config-dir ~/.config/subversion"
-
