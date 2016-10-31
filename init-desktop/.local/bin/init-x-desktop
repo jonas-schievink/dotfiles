@@ -21,8 +21,3 @@ xrdb -merge ~/.config/X11/Xresources
 # Delay in milliseconds, repeat rate in Hz
 xset r rate 220 40
 
-# Disable screen standby (DPMS)
-# FIXME doesn't work. Nothing works. Why would it.
-xset dpms 0 0 0
-xset s off
-
