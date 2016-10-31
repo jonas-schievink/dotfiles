@@ -1,0 +1,22 @@
+syntax on
+filetype plugin indent on
+
+" Tab width = 4
+set tabstop=4
+" Make < and > indent by 4 columns
+set shiftwidth=4
+" Replace tabs with spaces
+set expandtab
+" Line numbers
+set number
+" Relative line numbers for fast movement and editing
+set relativenumber
+
+" XDG compliance
+set directory=$XDG_CACHE_HOME/vim,~/,/tmp
+set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+set undodir=$XDG_CACHE_HOME/vim/undo
+set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
+
