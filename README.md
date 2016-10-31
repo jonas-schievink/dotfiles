@@ -20,8 +20,8 @@ Each directory contains a set of dotfiles that can be installed together:
   systemd.
 * `termite`: [Termite](https://github.com/thestinger/termite/) configuration and
   color scheme.
-* `vim`: My `vimrc`, located in `~/.vim/vimrc` to unclutter `$HOME` (also
-  contains XDG fixes for the same reason).
+* `vim`: My `vimrc`, located in `~/.config/vim/vimrc` to unclutter `$HOME`
+  (the `.vimrc` location is overridden by the `xsession` env vars).
 * `X11`: Contains an `Xresources` file that is probably unnecessary now that I
   think about it...
 * `xsession`: Contains a `.xsession` script to be run when any X session is started.
