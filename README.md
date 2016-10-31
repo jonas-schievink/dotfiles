@@ -24,3 +24,5 @@ Each directory contains a set of dotfiles that can be installed together:
   contains XDG fixes for the same reason).
 * `X11`: Contains an `Xresources` file that is probably unnecessary now that I
   think about it...
+* `xsession`: Contains a `.xsession` script to be run when any X session is started.
+
