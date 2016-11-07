@@ -7,11 +7,13 @@
 
 pasystray &
 dropbox &
+megasync &
 
 # Start a notification server
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 # HACK: mount /boot in here
 # FIXME: Figure out if this is still necessary
+# FIXME: I also want a better workaround if this is still required
 sudo mount /boot
 
