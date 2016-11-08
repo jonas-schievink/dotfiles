@@ -47,7 +47,7 @@ if [[ -n $(cd "$dotpath"; git status --porcelain) ]]; then
     echo "✕ Dotfiles repository »$dotpath« is dirty"
     echo ""
     echo "Commit or stash the changes first"
-#    exit 1
+    exit 1
 fi
 
 # Abs. path to import
