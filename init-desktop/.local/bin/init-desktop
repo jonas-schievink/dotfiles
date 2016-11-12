@@ -6,7 +6,6 @@
 # Basically, an "Autostart" file.
 
 pasystray &
-dropbox &
 megasync &
 
 # Start a notification server
