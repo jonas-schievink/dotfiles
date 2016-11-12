@@ -1,7 +1,3 @@
-# Oh My Fish init
-set -gx OMF_PATH "/home/jonas/.local/share/omf"
-source $OMF_PATH/init.fish
-
 eval (thefuck --alias | tr '\n' ';')
 
 set PATH ~/.local/bin $PATH
