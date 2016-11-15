@@ -1,0 +1,10 @@
+[user]
+	name = Jonas Schievink
+	email = jonasschievink@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
+	excludesfile = /home/jonas/.config/git/gitignore
+[rerere]
+	enabled = true
