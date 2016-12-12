@@ -2,6 +2,9 @@
 
 # This is sourced as a bash script
 
+# make scrolling nicer
+export MOZ_USE_XINPUT2=1
+
 # XDG directory support
 export XDG_CONFIG_HOME=~/.config
 export XDG_CACHE_HOME=~/.cache
