@@ -9,8 +9,6 @@ set shiftwidth=4
 set expandtab
 " Line numbers
 set number
-" Relative line numbers for fast movement and editing
-set relativenumber
 
 " XDG compliance
 set directory=$XDG_CACHE_HOME/vim,~/,/tmp
