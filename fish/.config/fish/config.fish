@@ -8,10 +8,6 @@ set -x VISUAL $EDITOR
 set -x ANDROID_HOME /opt/android-sdk
 set -x NDK_HOME /opt/android-ndk
 
-set -x LD /usr/bin/ld.gold
-set -x CC /usr/bin/clang
-set -x CXX /usr/bin/clang++
-
 # get rid of the annoying greeting
 set fish_greeting
 
