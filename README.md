@@ -9,7 +9,7 @@ a set of files.
 Each directory contains a set of dotfiles that can be installed together:
 
 * `fish`: My [fish](https://github.com/fish-shell/fish-shell) configuration.
-  Pretty uninsteresting.
+  Pretty uninteresting.
 * `init-desktop`: Starts scripts and programs after X11 was launched.
 * `retroarch`: RetroArch config. Updated mostly automatically via the GUI.
 * `runsteam`: A small script and `.desktop` file for running Steam as the
