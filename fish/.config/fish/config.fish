@@ -11,6 +11,9 @@ set -x NDK_HOME /opt/android-ndk
 # get rid of the annoying greeting
 set fish_greeting
 
+# unshortened directory names in prompt
+set -g fish_prompt_pwd_dir_length 0
+
 # make ssh-agent usable
 set -x SSH_AUTH_SOCK "$XDG_RUNTIME_DIR/smith.socket"
 
