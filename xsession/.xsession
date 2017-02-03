@@ -2,6 +2,8 @@
 
 # This is sourced as a bash script
 
+export PATH=~/.local/bin:$PATH
+
 # make scrolling nicer
 export MOZ_USE_XINPUT2=1
 

@@ -1,7 +1,5 @@
 eval (thefuck --alias | tr '\n' ';')
 
-set PATH ~/.local/bin $PATH
-
 set -x EDITOR vim
 set -x VISUAL $EDITOR
 
