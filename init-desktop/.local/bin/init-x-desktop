@@ -13,10 +13,14 @@ compton --no-fading-openclose &
 # hidden.
 # This still has a bug where occasionally the window focus jumps back to the
 # where the (invisible) mouse is hovering over.
+# Ideally, I'd except a tool like unclutter to simply change the cursor to a
+# transparent one instead of the weird stuff it's doing. Maybe this is possible
+# on wayland?
 unclutter -idle 2 -noevents &
 
+# Xmodmap is reconfiguring my Model M to use the right control key as the i3
+# modifier (since it doesn't have a Super key).
 xmodmap ~/.config/X11/Xmodmap
-xrdb -merge ~/.config/X11/Xresources
 
 # Delay in milliseconds, repeat rate in Hz
 xset r rate 220 40
