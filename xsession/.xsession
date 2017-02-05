@@ -2,7 +2,15 @@
 
 # This is sourced as a bash script
 
-export PATH=~/.local/bin:$PATH
+export PATH="~/.local/bin:$PATH"
+
+export EDITOR="vim"
+export VISUAL="$EDITOR"
+
+export ANDROID_HOME="/opt/android-sdk"
+export NDK_HOME="/opt/android-ndk"
+
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/smith.socket"
 
 # make scrolling nicer
 export MOZ_USE_XINPUT2=1
