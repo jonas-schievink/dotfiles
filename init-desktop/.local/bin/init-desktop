@@ -7,7 +7,7 @@
 
 pasystray &
 megasync &
-mpd &
+mpd
 
 # Start a notification server
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
