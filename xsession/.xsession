@@ -2,7 +2,7 @@
 
 # This is sourced as a bash script
 
-export PATH="~/.local/bin:$PATH"
+export PATH=~/.local/bin:$PATH
 
 export EDITOR="vim"
 export VISUAL="$EDITOR"
