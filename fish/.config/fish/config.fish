@@ -8,6 +8,9 @@ set -g fish_prompt_pwd_dir_length 0
 
 alias 'beep' 'notify-send "BEEP" "Pinged from shell."'
 
+# use the GitHub "hub" cli for enhanced git operations
+alias 'git' 'hub'
+
 # make 'less' pass colors through
 alias 'less' 'less -R'
 alias 'dmesg' 'dmesg --color=always'
