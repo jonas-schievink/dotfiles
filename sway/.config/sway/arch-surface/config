@@ -1,3 +1,6 @@
+# Mod4 = Logo Key, Mod1 = Alt
+set $mod Mod4
+
 # Set scaling of integrated HiDPI display
-output eDP-1 scale 2
+output WLC-1 scale 2
 
