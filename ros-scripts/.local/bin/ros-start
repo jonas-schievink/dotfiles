@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Starts the ROS Ubuntu 16.04 Container
-sudo machinectl start ros
-
-# Bind-mounts the shared folder
-sudo machinectl bind ros $HOME/ros
-

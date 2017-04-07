@@ -1,5 +1,0 @@
-#!/bin/bash
-
-# Stops the ROS container
-sudo machinectl stop ros
-
