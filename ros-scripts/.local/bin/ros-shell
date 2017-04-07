@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Launches a fish shell inside the (running) ROS container
+sudo machinectl shell jonas@ros /usr/bin/fish
+
