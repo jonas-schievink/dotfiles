@@ -6,7 +6,7 @@
 # Basically, an "Autostart" file.
 
 pasystray &
-megasync &
+syncthing-gtk -m &
 mpd
 
 # Start a notification server
