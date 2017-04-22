@@ -38,6 +38,7 @@ export HISTFILE="$XDG_DATA_HOME"/bash/history
 export VIMPERATOR_INIT=":source $XDG_CONFIG_HOME/vimperator/vimperatorrc"
 export VIMPERATOR_RUNTIME="$XDG_CONFIG_HOME"/vimperator
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 
 # FIXME This breaks everything. Figure out why! :(
 #export XAUTHORITY="$XDG_RUNTIME_DIR"/X11/xauthority
