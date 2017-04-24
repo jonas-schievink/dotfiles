@@ -8,6 +8,7 @@
 pasystray &
 syncthing-gtk -m &
 mpd
+polybar $(hostname) &
 
 # Start a notification server
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
