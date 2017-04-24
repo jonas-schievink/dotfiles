@@ -18,14 +18,11 @@ primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/archbox]
-monitor = DVI-D-0
+[bar/arch-surface]
+monitor = eDP-1
 width = 100%
-height = 23
-;offset-x = 1%
-;offset-y = 1%
-;radius = 6.0
-fixed-center = true
+height = 35
+fixed-center = false
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -33,8 +30,39 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-#border-size = 4
-#border-color = #00000000
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 0
+module-margin-right = 2
+
+font-0 = monospace:pixelsize=14;1
+font-1 = Noto Sans Symbols:pixelsize=14;1
+font-2 = Noto Emoji:pixelsize=14;1
+font-3 = Noto Sans Mono CJK KR:pixelsize=14;1
+
+#modules-left = mpd
+modules-center = i3
+modules-right = filesystem xbacklight volume memory cpu surface-temperature battery date
+
+tray-position = right
+tray-padding = 2
+tray-maxsize = 32
+
+#override-redirect = true
+wm-restack = i3
+
+[bar/archbox]
+monitor = DVI-D-0
+width = 100%
+height = 23
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
 
 padding-left = 0
 padding-right = 2
@@ -54,17 +82,9 @@ modules-right = filesystem xbacklight volume memory cpu temperature date
 
 tray-position = right
 tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
 
 #override-redirect = true
-+wm-restack = i3
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+wm-restack = i3
 
 [module/filesystem]
 type = internal/fs
@@ -282,6 +302,39 @@ label-warn = %temperature%
 label-warn-foreground = ${colors.secondary}
 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/surface-temperature]
+inherit = module/temperature
+
+# Surface uses thermal zone 1, zone 0 reports bogus
+thermal-zone = 1
+
+[module/battery]
+type = internal/battery
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = AC1
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 15
+
+format-charging-underline = #0aa54d
+format-charging-prefix = "BAT "
+format-charging-prefix-foreground = ${colors.foreground-alt}
+
+format-discharging-underline = ${self.format-charging-underline}
+format-discharging-prefix = ${self.format-charging-prefix}
+format-discharging-prefix-foreground = ${self.format-charging-prefix-foreground}
 
 [settings]
 screenchange-reload = true
