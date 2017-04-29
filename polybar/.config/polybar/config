@@ -35,7 +35,7 @@ green =     #859900
 [bar/arch-surface]
 monitor = eDP-1
 width = 100%
-height = 35
+height = 26
 fixed-center = false
 
 background = ${colors.background}
@@ -45,26 +45,23 @@ line-size = 3
 line-color = #f00
 
 padding-left = 0
-padding-right = 2
+padding-right = 0
 
 module-margin-left = 0
-module-margin-right = 2
+module-margin-right = 1
 
 font-0 = monospace:pixelsize=14;1
 font-1 = Noto Sans Symbols:pixelsize=14;1
 font-2 = Noto Emoji:pixelsize=14;1
 font-3 = Noto Sans Mono CJK KR:pixelsize=14;1
 
-#modules-left = mpd
+modules-left = volume
 modules-center = i3
-modules-right = filesystem xbacklight volume memory cpu surface-temperature battery date
+modules-right = filesystem xbacklight memory cpu surface-temperature battery wlan date
 
 tray-position = right
-tray-padding = 2
+tray-padding = 4
 tray-maxsize = 32
-
-#override-redirect = true
-wm-restack = i3
 
 [bar/archbox]
 monitor = DVI-D-0
@@ -118,7 +115,7 @@ mount-1 = /boot
 ;   %used%
 ; Default: %mountpoint% %percentage_free%%
 # TODO: Figure out how to reference color variables from in there
-label-mounted = %{F#268bd2}%mountpoint%%{F-}: %free% free
+label-mounted = %{F#268bd2}%mountpoint%%{F-} %free%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -293,11 +290,11 @@ adapter = AC1
 ; Default: 5
 poll-interval = 15
 
-format-charging-underline = #0aa54d
+format-charging-underline = ${colors.blue}
 format-charging-prefix = "BAT "
 format-charging-prefix-foreground = ${colors.foreground-alt}
 
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${colors.green}
 format-discharging-prefix = ${self.format-charging-prefix}
 format-discharging-prefix-foreground = ${self.format-charging-prefix-foreground}
 
@@ -308,6 +305,22 @@ token = ${file:/home/jonas/.config/polybar/.gh-token}
 
 format-underline = ${colors.green}
 label = GitHub: %notifications%
+
+[module/wlan]
+type = internal/network
+interface = wlp1s0
+interval = 5
+
+format-connected-prefix = "WLAN "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected-underline = ${colors.green}
+
+label-connected = %essid%
+
+format-disconnected-underline = ${colors.red}
+
+label-disconnected = disconnected
+label-disconnected-foreground = ${colors.red}
 
 [settings]
 screenchange-reload = true
