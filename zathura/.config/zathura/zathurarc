@@ -5,6 +5,9 @@ set guioptions sv
 # Copy to Ctrl+V clipboard, not middle mouse button clipboard
 set selection-clipboard clipboard
 
+set smooth-scroll true
+
+
 set recolor true
 
 # Solarized dark
