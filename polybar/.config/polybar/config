@@ -95,7 +95,7 @@ tray-position = right
 tray-padding = 2
 
 #override-redirect = true
-wm-restack = i3
+#wm-restack = i3
 
 [module/filesystem]
 type = internal/fs
