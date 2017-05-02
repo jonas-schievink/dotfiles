@@ -89,7 +89,7 @@ font-4 = Noto Sans Mono CJK KR:pixelsize=10;1
 
 modules-left = volume mpd
 modules-center = i3
-modules-right = filesystem memory cpu temperature github date
+modules-right = filesystem memory cpu temperature date
 
 tray-position = right
 tray-padding = 2
