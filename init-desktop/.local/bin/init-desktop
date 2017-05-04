@@ -6,7 +6,6 @@
 # Basically, an "Autostart" file.
 
 pasystray &
-syncthing-gtk -m &
 mpd
 polybar $(hostname) &
 
