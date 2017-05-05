@@ -99,7 +99,7 @@ tray-padding = 2
 
 [module/filesystem]
 type = internal/fs
-interval = 25
+interval = 60
 
 mount-0 = /
 mount-1 = /boot
@@ -190,7 +190,7 @@ label-song-ellipsis = true
 
 [module/cpu]
 type = internal/cpu
-interval = 2
+interval = 3
 format-prefix = "CPU "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.orange}
@@ -206,7 +206,7 @@ label = %percentage_used:2%%
 
 [module/date]
 type = internal/date
-interval = 10
+interval = 12
 
 date = %d.%m.
 date-alt = %a, %d.%m.%Y
@@ -247,7 +247,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/temperature]
 type = internal/temperature
-interval = 3
+interval = 6
 thermal-zone = 0
 warn-temperature = 60
 
@@ -279,6 +279,8 @@ type = internal/battery
 battery = BAT0
 adapter = AC1
 
+full-at = 100
+
 ; If an inotify event haven't been reported in this many
 ; seconds, manually poll for new values.
 ;
@@ -309,7 +311,7 @@ label = GitHub: %notifications%
 [module/wlan]
 type = internal/network
 interface = wlp1s0
-interval = 5
+interval = 6
 
 format-connected-prefix = "WLAN "
 format-connected-prefix-foreground = ${colors.foreground-alt}
