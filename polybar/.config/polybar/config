@@ -279,7 +279,7 @@ type = internal/battery
 battery = BAT0
 adapter = AC1
 
-full-at = 100
+full-at = 99
 
 ; If an inotify event haven't been reported in this many
 ; seconds, manually poll for new values.
