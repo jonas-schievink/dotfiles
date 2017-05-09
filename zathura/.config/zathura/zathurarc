@@ -8,7 +8,7 @@ set selection-clipboard clipboard
 set smooth-scroll true
 
 
-set recolor true
+#set recolor true
 
 # Solarized dark
 set recolor-darkcolor "#839496"
