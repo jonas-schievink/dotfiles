@@ -1,0 +1,5 @@
+set smoothscroll
+
+let configpath = '/home/jonas/.config/cvim/.cvimrc'
+set localconfig
+
