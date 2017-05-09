@@ -5,9 +5,9 @@
 # Should be kept X11/Wayland agnostic.
 # Basically, an "Autostart" file.
 
+polybar $(hostname) &
 pasystray &
 mpd
-polybar $(hostname) &
 
 # Start a notification server
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
