@@ -22,6 +22,9 @@ compton --no-fading-openclose &
 # modifier (since it doesn't have a Super key).
 xmodmap ~/.config/X11/Xmodmap
 
+# Merge Xresources file. Can be used to set various X11 application properties.
+xrdb ~/.config/X11/Xresources
+
 # Delay in milliseconds, repeat rate in Hz
 xset r rate 220 40
 
