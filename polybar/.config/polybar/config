@@ -63,7 +63,7 @@ tray-position = right
 tray-padding = 4
 tray-maxsize = 32
 
-[bar/archbox]
+[bar/archbox-DVI-D-0]
 monitor = DVI-D-0
 width = 100%
 height = 21
@@ -93,6 +93,34 @@ modules-right = filesystem memory cpu temperature date
 
 tray-position = right
 tray-padding = 2
+
+[bar/archbox-DVI-I-1]
+monitor = DVI-I-1
+width = 100%
+height = 21
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = monospace:pixelsize=10;1
+font-1 = Noto Sans Symbols:pixelsize=10;1
+font-2 = Noto Emoji:pixelsize=10;1
+font-3 = Powerline Symbols:pixelsize=10;1
+font-4 = Noto Sans Mono CJK KR:pixelsize=10;1
+
+modules-left = 
+modules-center = i3
+modules-right = date
 
 #override-redirect = true
 #wm-restack = i3
@@ -166,7 +194,7 @@ label-unfocused = ${self.label-focused}
 label-unfocused-padding = ${self.label-focused-padding}
 
 label-visible = ${self.label-focused}
-#label-visible-underline = #555555
+label-visible-underline = ${colors.base01}
 label-visible-padding = ${self.label-focused-padding}
 
 label-urgent = ${self.label-focused}

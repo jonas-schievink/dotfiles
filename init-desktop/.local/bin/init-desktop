@@ -5,7 +5,11 @@
 # Should be kept X11/Wayland agnostic.
 # Basically, an "Autostart" file.
 
-polybar $(hostname) &
+# Start a host and monitor specific polybar
+for monitor in $(xrandr --listmonitors | tail -n +2 | awk '{print $NF}'); do
+    polybar "$(hostname)-$monitor" &
+done
+
 pasystray &
 mpd
 
