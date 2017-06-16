@@ -318,14 +318,14 @@ full-at = 99
 ; Disable polling by setting the interval to 0.
 ;
 ; Default: 5
-poll-interval = 15
+poll-interval = 20
 
 format-charging-underline = ${colors.blue}
-format-charging-prefix = "BAT "
+format-charging-prefix = "CHR "
 format-charging-prefix-foreground = ${colors.foreground-alt}
 
 format-discharging-underline = ${colors.green}
-format-discharging-prefix = ${self.format-charging-prefix}
+format-discharging-prefix = "BAT "
 format-discharging-prefix-foreground = ${self.format-charging-prefix-foreground}
 
 [module/github]
