@@ -1,3 +1,11 @@
+clear Mod3
+clear Mod4
+clear Mod5
+
 remove control = Control_R
-add mod3 = Control_R
+
+! Remap right control to left Windows key
+keycode 105 = Super_L
+
+add Mod3 = Super_L
 
