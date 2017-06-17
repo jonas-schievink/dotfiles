@@ -36,7 +36,7 @@ filter_unmatched_urls = true
 # special
 foreground      = #93a1a1
 foreground_bold = #93a1a1
-cursor          = #93a1a1
+cursor          = #657b83
 background      = #002b36
 
 # black
