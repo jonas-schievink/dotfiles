@@ -6,7 +6,7 @@ xrdb -merge ~/.config/X11/Xresources
 
 export PATH=~/.local/bin:$PATH
 
-export EDITOR="vim"
+export EDITOR="nvim"
 export VISUAL="$EDITOR"
 
 export ANDROID_HOME="/opt/android-sdk"
