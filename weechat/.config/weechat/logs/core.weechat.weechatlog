@@ -1,6 +1,0 @@
-2017-07-30 18:21:16		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
-2017-07-30 18:21:16		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
-2017-07-30 18:21:16		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
-2017-07-30 18:21:16		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
-2017-07-30 18:21:16		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
-2017-07-30 18:21:26		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, guile, irc, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
