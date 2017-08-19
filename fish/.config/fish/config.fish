@@ -1,5 +1,3 @@
-eval (thefuck --alias | tr '\n' ';')
-
 if test -z "$DISPLAY"
     # not running in X11 -> environment not prepopulated (ie. SSH or kernel console session)
     # source .xsession as a bash script and import environment
