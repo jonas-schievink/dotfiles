@@ -1,7 +1,10 @@
 eval (thefuck --alias | tr '\n' ';')
 
-# source .xsession as a bash script and import environment
-fenv source ~/.xsession
+if test -z "$DISPLAY"
+    # not running in X11 -> environment not prepopulated (ie. SSH or kernel console session)
+    # source .xsession as a bash script and import environment
+    fenv source ~/.xsession
+end
 
 # get rid of the annoying greeting
 set fish_greeting
