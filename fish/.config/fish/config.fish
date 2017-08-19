@@ -1,5 +1,8 @@
 eval (thefuck --alias | tr '\n' ';')
 
+# source .xsession as a bash script and import environment
+fenv source ~/.xsession
+
 # get rid of the annoying greeting
 set fish_greeting
 
