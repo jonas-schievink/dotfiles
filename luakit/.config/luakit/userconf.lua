@@ -19,6 +19,7 @@ local newtab_chrome = require "newtab_chrome"
 local editor = require "editor"
 local settings = require "settings"
 local bookmark_bar = require "bookmark_bar"
+local webview = require "webview"
 
 editor.editor_cmd = "termite -e 'nvim {file} +{line}'" -- FIXME untested
 
@@ -49,6 +50,13 @@ modes.add_binds("normal", {
     -- make Ctrl+C work in normal mode instead of just in insert
     { "<Control-c>", "Copy selected text.", function()
         luakit.selection.clipboard = luakit.selection.primary
+    end },
+
+    -- emulate Ctrl+F to search
+    { "<Control-f>", "Search.", function (w) w:start_search("/") end },
+    { "<Escape>", "Clear search highlights.", function (w) w:clear_search() end },
+    { "<Return>", "Next match.", function (w, m)
+        w:search(nil, true)
     end },
 
     { "v", "Toggle tablist visibility.", function(w)
@@ -90,6 +98,28 @@ end)
 
 -- redirect "new tab" page to bookmarks
 newtab_chrome.new_tab_src = [[<meta http-equiv="refresh" content="0;luakit://bookmarks">]]
+
+-- these are just gsub patterns
+local redirections = {
+    -- redirect direct-links to imgur files to their "real" page
+    -- works around gifs being fucking stupid and gifv becoming blank upon
+    -- loading
+    ["^https://i%.imgur%.com/([^.]+).*$"] = "https://imgur.com/%1",
+}
+
+webview.add_signal("init", function(view)
+    view:add_signal("navigation-request", function(view, uri)
+        local old_uri, n = uri, nil
+        for k, v in pairs(redirections) do
+            uri, n = uri:gsub(k, v)
+            if n ~= 0 then
+                msg.info("replaced uri '"..old_uri.."' with '"..uri.."'")
+                view.uri = uri
+                return false
+            end
+        end
+    end)
+end)
 
 -- aptly named debugging utilities
 -- for some reason, `:lua print("AAAAH")` does nothing.
