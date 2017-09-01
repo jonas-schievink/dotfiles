@@ -18,6 +18,7 @@ local msg = require "msg"
 local newtab_chrome = require "newtab_chrome"
 local editor = require "editor"
 local settings = require "settings"
+local session = require "session"
 local bookmark_bar = require "bookmark_bar"
 local webview = require "webview"
 
@@ -31,6 +32,7 @@ settings.window.search_engines = {
     yt   = "https://www.youtube.com/results?search_query=%s",
     ebay = "https://www.ebay.de/sch/i.html?&_nkw=%s",
     ama  = "https://www.amazon.de/s/?field-keywords=%s",
+    dict = "https://www.dict.cc/?s=%s",
 
     default = "https://google.com/search?q=%s",
 }
@@ -66,21 +68,19 @@ modes.add_binds("normal", {
     { "<F5>", "Reload current page.", function(w) w:reload() end },
 })
 
+local t = timer{ interval = 60*1000 }
+t:add_signal("timeout", function()
+    session.save()
+    msg.info("session autosaved")
+end)
+t:start()
+
 window.add_signal("build", function(w)
-    -- save the session automatically
-    -- 1. when the window is closed
+    -- save the session automatically when the window is closed
     w.win:add_signal("can-close", function()
         w:save_session()
         msg.info("session saved, closing!")
     end)
-    -- 2. regularly on a timer
-    -- FIXME this could be improved by only running when tabs are opened/closed
-    local t = timer{ interval = 60*1000 }
-    t:add_signal("timeout", function()
-        w:save_session()
-        msg.info("session autosaved")
-    end)
-    t:start()
 
     -- w.layout: w.tablist.widget w.menu_tabs w.bar_layout
 
@@ -104,7 +104,7 @@ local redirections = {
     -- redirect direct-links to imgur files to their "real" page
     -- works around gifs being fucking stupid and gifv becoming blank upon
     -- loading
-    ["^https://i%.imgur%.com/([^.]+).*$"] = "https://imgur.com/%1",
+    ["^https?://i%.imgur%.com/([^.]+).*$"] = "https://imgur.com/%1",
 }
 
 webview.add_signal("init", function(view)
@@ -114,7 +114,12 @@ webview.add_signal("init", function(view)
             uri, n = uri:gsub(k, v)
             if n ~= 0 then
                 msg.info("replaced uri '"..old_uri.."' with '"..uri.."'")
-                view.uri = uri
+
+                -- instead of setting view.uri directly, we do a redirection.
+                -- this way, the clicked link will still be marked as visited,
+                -- which is nice for stuff like redditing
+                local redir = [[<meta http-equiv="refresh" content="0;%s">]]
+                view:load_string(string.format(redir, uri), old_uri)
                 return false
             end
         end
