@@ -105,6 +105,15 @@ theme.ok = { fg = "#000", bg = "#FFF" }
 theme.warn = { fg = "#F00", bg = "#FFF" }
 theme.error = { fg = "#FFF", bg = "#F00" }
 
+-- FIXME this is very ugly, fix this!
+local status, stdout, stderr = luakit.spawn_sync("hostname")
+assert(status == 0, "hostname command failed: "..tostring(stderr))
+stdout = stdout:gsub("%s", "")
+
+if stdout == "arch-surface" then
+    theme.font = "20px monospace"
+end
+
 return theme
 
 -- vim: et:sw=4:ts=8:sts=4:tw=80

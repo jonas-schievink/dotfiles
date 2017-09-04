@@ -136,3 +136,10 @@ ugh = {
         end
     end,
 }
+
+-- Load host-specific config
+local status, stdout, stderr = luakit.spawn_sync("hostname")
+assert(status == 0, "hostname command failed: "..tostring(stderr))
+stdout = stdout:gsub("%s", "")
+require(string.format("userconf-%s", stdout))
+
