@@ -62,7 +62,7 @@ modes.add_binds("normal", {
     end },
 
     { "v", "Toggle tablist visibility.", function(w)
-        w.tablist.visible = not w.tablist.visible
+        w.tablist.widget.visible = not w.tablist.widget.visible
     end },
 
     { "<F5>", "Reload current page.", function(w) w:reload() end },
