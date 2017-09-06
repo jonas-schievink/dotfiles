@@ -66,7 +66,16 @@ modes.add_binds("normal", {
     end },
 
     { "<F5>", "Reload current page.", function(w) w:reload() end },
+
+    { "y", "Yank current URI to clipboard.", function(w)
+        local uri = string.gsub(w.view.uri or "", " ", "%%20")
+        luakit.selection.clipboard = uri
+        w:notify("Yanked uri (to clipboard): " .. uri)
+    end },
 })
+
+-- Ctrl+Z enters passthrough mode. Disable that so it undos as normal.
+modes.remove_binds("insert", { "<Control-z>" })
 
 local t = timer{ interval = 60*1000 }
 t:add_signal("timeout", function()
