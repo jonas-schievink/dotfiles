@@ -7,6 +7,7 @@
 -- Support requires installation of gstreamer plugins which are marked as
 -- optional dependencies! On Arch, the required packages are:
 --     gst-libav gst-plugins-base gst-plugins-good
+-- (a subset of these is probably enough, but I haven't tried. TODO test this!)
 
 -- TODO: Check that downloads work properly
 -- TODO: Import chromium bookmarks, add proper tags
@@ -22,7 +23,7 @@ local session = require "session"
 local bookmark_bar = require "bookmark_bar"
 local webview = require "webview"
 
-editor.editor_cmd = "termite -e 'nvim {file} +{line}'" -- FIXME untested
+editor.editor_cmd = "termite -e 'nvim {file} +{line}'"
 
 settings.window.search_engines = {
     aur  = "https://aur.archlinux.org/packages.php?O=0&K=%s&do_Search=Go",
@@ -103,6 +104,14 @@ window.add_signal("build", function(w)
     -- FIXME: they still appear after the bookmark bar because they're part of
     -- the menu_tabs overlay widget
     w.menu_tabs:pack(w.menu.widget, { halign = "fill", valign = "start" })
+
+    w.win:add_signal("property::fullscreen", function(win)
+        luakit.idle_add(function()
+            -- manage tab bar visibility
+            w.tablist.widget.visible = not win.fullscreen
+            return false -- remove from idle functions
+        end)
+    end)
 end)
 
 -- redirect "new tab" page to bookmarks
