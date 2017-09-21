@@ -2,7 +2,7 @@
 
 # This is sourced as a bash script
 
-xrdb -merge ~/.config/X11/Xresources
+[ -n "$DISPLAY" ] && xrdb -merge ~/.config/X11/Xresources
 
 export PATH=~/.local/bin:$PATH
 
