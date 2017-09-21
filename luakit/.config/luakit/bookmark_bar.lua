@@ -62,11 +62,21 @@ return {
 
         if not bookmarks.db then bookmarks.init() end
         local rows = bookmarks.db:exec("SELECT uri, title, tags FROM bookmarks")
+        local buttons = {}
         for _, row in ipairs(rows) do
             local tags = lousy.util.string.split(row.tags or "")
             if lousy.util.table.hasitem(tags, "bar") then
-                bar:pack(makebutton(w, row))
+                table.insert(buttons, {
+                    sortkey = row.title or row.uri,
+                    button = makebutton(w, row),
+                })
             end
+        end
+
+        -- sort buttons alphabetically. otherwise, their order changes when editing one of them.
+        table.sort(buttons, function(a, b) return a.sortkey < b.sortkey end)
+        for _, v in ipairs(buttons) do
+            bar:pack(v.button)
         end
 
         -- hide bookmark bar when in fullscreen

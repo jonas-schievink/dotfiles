@@ -34,6 +34,7 @@ settings.window.search_engines = {
     ebay = "https://www.ebay.de/sch/i.html?&_nkw=%s",
     ama  = "https://www.amazon.de/s/?field-keywords=%s",
     dict = "https://www.dict.cc/?s=%s",
+    g = "https://google.com/search?q=%s",
 
     default = "https://google.com/search?q=%s",
 }
@@ -76,6 +77,7 @@ modes.add_binds("normal", {
 })
 
 -- Ctrl+Z enters passthrough mode. Disable that so it undos as normal.
+-- FIXME No longer works...
 modes.remove_binds("insert", { "<Control-z>" })
 
 local t = timer{ interval = 60*1000 }
