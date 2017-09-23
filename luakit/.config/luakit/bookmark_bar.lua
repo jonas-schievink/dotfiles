@@ -67,7 +67,7 @@ return {
             local tags = lousy.util.string.split(row.tags or "")
             if lousy.util.table.hasitem(tags, "bar") then
                 table.insert(buttons, {
-                    sortkey = row.title or row.uri,
+                    sortkey = (row.title or row.uri):lower(),
                     button = makebutton(w, row),
                 })
             end
