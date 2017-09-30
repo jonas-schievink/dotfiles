@@ -34,7 +34,8 @@ settings.window.search_engines = {
     ebay = "https://www.ebay.de/sch/i.html?&_nkw=%s",
     ama  = "https://www.amazon.de/s/?field-keywords=%s",
     dict = "https://www.dict.cc/?s=%s",
-    g = "https://google.com/search?q=%s",
+    g    = "https://google.com/search?q=%s",
+    rs   = "https://doc.rust-lang.org/std/?search=%s",
 
     default = "https://google.com/search?q=%s",
 }
