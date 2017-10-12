@@ -20,5 +20,5 @@ alias 'less' 'less -R'
 alias 'dmesg' 'dmesg --color=always'
 
 # btrfs/CoW support aliases
-alias 'cp' 'cp --reflink=always'
+alias 'cp' 'cp --reflink=auto'
 
