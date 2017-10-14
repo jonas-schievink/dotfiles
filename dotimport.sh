@@ -78,5 +78,5 @@ echo "→ Linking new dotfiles back..."
 stow -d "$dotpath" "$dotname"
 
 echo "→ Creating commit..."
-(cd "$dotpath" && git add "$target" && git commit -m "Autoimport $dotname files")
+(cd "$dotpath" && git add "$target" && git commit -e -m "Autoimport $dotname files")
 
