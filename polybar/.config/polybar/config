@@ -316,7 +316,7 @@ full-at = 99
 ; Disable polling by setting the interval to 0.
 ;
 ; Default: 5
-poll-interval = 0
+poll-interval = 5
 
 format-charging-underline = ${colors.blue}
 format-charging-prefix = "CHR "
