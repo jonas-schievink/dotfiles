@@ -77,8 +77,8 @@ line-color = #f00
 padding-left = 1
 padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 2
+module-margin-right = 0
 
 font-0 = monospace:pixelsize=10;1
 font-1 = Noto Sans Symbols:pixelsize=10;1
@@ -106,11 +106,11 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-padding-left = 0
-padding-right = 2
+padding-left = 1
+padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 2
+module-margin-right = 0
 
 font-0 = monospace:pixelsize=10;1
 font-1 = Noto Sans Symbols:pixelsize=10;1
@@ -144,7 +144,7 @@ label-mounted = %{F#268bd2}%mountpoint%%{F-} %free%
 label-mounted-underline = ${colors.yellow}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
-spacing = 1
+spacing = ${root.module-margin-left}
 
 [module/i3]
 type = internal/i3
