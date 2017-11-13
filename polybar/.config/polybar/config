@@ -307,6 +307,10 @@ format-charging-underline = ${colors.blue}
 format-charging-prefix = "CHR "
 format-charging-prefix-foreground = ${colors.foreground-alt}
 
+format-full-underline = ${colors.green}
+format-full-prefix = "FULL "
+format-full-prefix-foreground = ${self.format-charging-prefix-foreground}
+
 format-discharging-underline = ${colors.yellow}
 format-discharging-prefix = "BAT "
 format-discharging-prefix-foreground = ${self.format-charging-prefix-foreground}
