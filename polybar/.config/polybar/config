@@ -44,11 +44,11 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-padding-left = 0
-padding-right = 0
+padding-left = 1
+padding-right = 1
 
-module-margin-left = 0
-module-margin-right = 1
+module-margin-left = 1
+module-margin-right = 0
 
 font-0 = "monospace:pixelsize=14;2"
 font-1 = "NotoEmoji:pixelsize=12;2"
@@ -59,7 +59,6 @@ modules-right = memory cpu surface-temperature battery wlan date
 
 tray-position = right
 tray-padding = 4
-tray-maxsize = 32
 
 # Primary monitor
 [bar/archbox-DVI-D-0]
