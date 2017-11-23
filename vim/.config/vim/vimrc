@@ -9,6 +9,8 @@ set shiftwidth=4
 set expandtab
 " Line numbers
 set number
+" yank/delete to system clipboard
+set clipboard=unnamedplus
 
 " XDG compliance
 set directory=$XDG_CACHE_HOME/vim,~/,/tmp
