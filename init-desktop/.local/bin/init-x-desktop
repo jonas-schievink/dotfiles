@@ -25,3 +25,5 @@ xmodmap ~/.config/X11/Xmodmap
 # Delay in milliseconds, repeat rate in Hz
 xset r rate 220 40
 
+redshift -l 52.283333:8.05 &
+
