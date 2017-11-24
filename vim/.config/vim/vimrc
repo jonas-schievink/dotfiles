@@ -28,6 +28,8 @@ set clipboard=unnamedplus
 
 call plug#begin('~/.local/share/vim/plugged')
 
+Plug 'vim-latex/vim-latex'
+
 " A Vim Plugin for Lively Previewing LaTeX PDF Output
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
@@ -36,4 +38,14 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
+"""""""""""""""
+" End Plugins "
+"""""""""""""""
+
+" Airline configuration
+let g:airline_theme='term'
+let g:airline_left_sep=''
+
+" LaTeX configuration
+let g:tex_flavor='latex'
 
