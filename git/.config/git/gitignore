@@ -4,5 +4,6 @@ CMakeLists.txt.user
 *.swp
 *.swo
 *~
+*.autosave
 .vscode
 
