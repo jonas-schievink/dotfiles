@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Sets up the JACK sound server so that ALSA, Pulse and MIDI works
+
+set -o errexit
+
+if jack_control status > /dev/null; then
+    echo "JACK appears to be running already, exiting!"
+    exit 1
+fi
+
+echo "Starting JACK sound server..."
+jack_control start
+
+(sleep 5 && echo "Starting PulseAudio..." && systemctl --user start pulseaudio && sleep 2 && echo "Starting pasystray..." && pasystray) &
+
+# Sleep for a bit so the systray works
+(sleep 7 && echo "Starting Cadence..." && cadence --minimized) &
+
+# Not sure if this works - cadence doesn't detect the bridge
+# I don't need it at the moment, so I'll just pass
+#echo "Starting MIDI bridge..."
+#a2jmidid -e &
+
