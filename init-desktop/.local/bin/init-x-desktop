@@ -4,6 +4,18 @@
 # This is run in addition to `init-session` for X11 sessions, and should do any
 # work required only on X11 but not on Wayland.
 
+# Setup logging
+LOGFILE=/tmp/INIT-DESKTOP-LOG
+exec > "$LOGFILE"
+exec 2>&1
+
+echo
+echo "init-x-desktop"
+date
+
+# Initialize generic desktop
+init-desktop &
+
 # "No Tears"
 # Curiously, `-b` to daemonize compton doesn't work and gives GL errors
 compton --no-fading-openclose &
@@ -13,7 +25,7 @@ compton --no-fading-openclose &
 # hidden.
 # This still has a bug where occasionally the window focus jumps back to the
 # where the (invisible) mouse is hovering over.
-# Ideally, I'd except a tool like unclutter to simply change the cursor to a
+# Ideally, I'd expect a tool like unclutter to simply change the cursor to a
 # transparent one instead of the weird stuff it's doing. Maybe this is possible
 # on wayland?
 #unclutter -idle 2 -noevents &
@@ -26,4 +38,6 @@ xmodmap ~/.config/X11/Xmodmap
 xset r rate 220 40
 
 redshift -l 52.283333:8.05 &
+
+(sleep 60 && rm "$LOGFILE") &
 
