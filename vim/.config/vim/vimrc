@@ -4,11 +4,11 @@ set directory=$XDG_CACHE_HOME/vim,~/,/tmp
 set backupdir=$XDG_CACHE_HOME/vim,~/,/tmp
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 set undodir=$XDG_CACHE_HOME/vim/undo
-set runtimepath=$XDG_CONFIG_HOME/vim,$XDG_CONFIG_HOME/vim/after,$VIM,$VIMRUNTIME
+set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after,$VIM
 let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc"
 
-syntax on
 filetype plugin indent on
+syntax on
 
 " Tab width = 4
 set tabstop=4
@@ -28,10 +28,9 @@ set clipboard=unnamedplus
 
 call plug#begin('~/.local/share/vim/plugged')
 
-Plug 'vim-latex/vim-latex'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-" A Vim Plugin for Lively Previewing LaTeX PDF Output
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'lervag/vimtex'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -46,6 +45,8 @@ call plug#end()
 let g:airline_theme='term'
 let g:airline_left_sep=''
 
-" LaTeX configuration
-let g:tex_flavor='latex'
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
+let g:tex_flavor = 'latex'
 
