@@ -85,7 +85,8 @@ font-2 = Noto Emoji:pixelsize=10;1
 font-3 = Powerline Symbols:pixelsize=10;1
 font-4 = Noto Sans Symbols 2:pixelsize=10;1
 
-modules-left = volume mpd
+#modules-left = volume mpd
+modules-left = mpd
 modules-center = i3
 modules-right = filesystem memory cpu temperature date
 
