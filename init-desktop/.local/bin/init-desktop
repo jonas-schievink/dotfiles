@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: Use `set -o errexit` and make this script more robust
+
 # Script to initialize my desktop session when using a window manager
 # and not a DE.
 # Should be kept X11/Wayland agnostic.
@@ -15,4 +17,7 @@ mpd
 
 # Start a notification server
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
+
+# When installed, start the NetworkManager applet
+nm-applet &
 
