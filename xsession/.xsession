@@ -45,3 +45,5 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 # FIXME This breaks everything. Figure out why! :(
 #export XAUTHORITY="$XDG_RUNTIME_DIR"/X11/xauthority
 
+export XSESSION_LOADED=1
+

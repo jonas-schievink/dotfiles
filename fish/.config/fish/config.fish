@@ -1,5 +1,6 @@
-if test -z "$DISPLAY"
-    # not running in X11 -> environment not prepopulated (ie. SSH or kernel console session)
+if test -z "$XSESSION_LOADED" -a -f ~/.xsession
+    # ~/.xsession wasn't yet loaded
+    # this can happen when we're executing from a kernel console or SSH session
     # source .xsession as a bash script and import environment
     fenv source ~/.xsession
 end
