@@ -209,7 +209,7 @@ format-online = <toggle> <label-song>
 icon-play = ▶
 icon-pause = ⏸
 
-label-song-maxlen = 50
+label-song-maxlen = 55
 label-song-ellipsis = true
 
 [module/cpu]
