@@ -17,13 +17,14 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/smith.socket"
 # make scrolling nicer
 export MOZ_USE_XINPUT2=1
 
+export CARGO_INCREMENTAL=1
+
 # XDG directory support
 export XDG_CONFIG_HOME=~/.config
 export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.local/share
 
 export GIMP2_DIRECTORY="$XDG_CONFIG_HOME"/gimp
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 export WINEPREFIX="$XDG_DATA_HOME"/wine
