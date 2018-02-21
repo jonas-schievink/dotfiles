@@ -9,7 +9,9 @@
 
 # Start a host and monitor specific polybar
 for monitor in $(xrandr --listmonitors | tail -n +2 | awk '{print $NF}'); do
-    polybar "$(hostname)-$monitor" &
+    bar="$(hostname)-$monitor"
+    echo "Starting polybar '$bar'"
+    polybar "$bar" &
 done
 
 pasystray &
