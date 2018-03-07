@@ -1,0 +1,48 @@
+// Place your settings in this file to overwrite the default settings
+{
+    // Language configuration: Rust
+    /*"rust.rustup": {
+        "toolchain": "nightly-x86_64-unknown-linux-gnu",
+        "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu"
+    },
+    "rust.mode": null,*/
+
+    // Language configuration: C++
+    "C_Cpp.clang_format_fallbackStyle": "none",
+    "C_Cpp.loggingLevel": "Information",
+
+    // Language configuration: LaTeX
+    "latex-workshop.debug.showUpdateMessage": false,
+
+    //"vim.useSystemClipboard": true,
+
+    "editor.wordWrap": "on",
+    "editor.cursorStyle": "line-thin",
+    "editor.fontFamily": "Noto Mono",
+    "editor.rulers": [
+        80,
+        100
+    ],
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.cursorBlinking": "solid",
+    "editor.renderControlCharacters": true,
+    "editor.tabSize": 4,
+    "terminal.external.linuxExec": "termite",
+    "workbench.colorTheme": "Solarized Dark",
+    "update.channel": "none",   // Disable update checks - pacaur does that
+    "git.enableSmartCommit": true,
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDragAndDrop": false,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "editor.multiCursorModifier": "alt",
+
+    "[latex]": {
+        "editor.wordWrapColumn": 80,
+        "editor.wordWrap": "wordWrapColumn",
+        // (this does in fact work, despite the 
+        //  squiggly lines)
+        "rewrap.wrappingColumn": 80,
+    }
+}
