@@ -19,6 +19,8 @@ export MOZ_USE_XINPUT2=1
 
 export CARGO_INCREMENTAL=1
 
+export ASEPRITE_ACCEPT_EULA=yes
+
 # XDG directory support
 export XDG_CONFIG_HOME=~/.config
 export XDG_CACHE_HOME=~/.cache
