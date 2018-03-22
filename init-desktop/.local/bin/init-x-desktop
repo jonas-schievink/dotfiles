@@ -28,7 +28,8 @@ compton --no-fading-openclose &
 # Ideally, I'd expect a tool like unclutter to simply change the cursor to a
 # transparent one instead of the weird stuff it's doing. Maybe this is possible
 # on wayland?
-#unclutter -idle 2 -noevents &
+# This is unclutter-xfixes
+unclutter --timeout 2 --jitter 3 &
 
 # Xmodmap is reconfiguring my Model M to use the right control key as the i3
 # modifier (since it doesn't have a Super key).
