@@ -33,7 +33,10 @@ unclutter --timeout 2 --jitter 3 &
 
 # Xmodmap is reconfiguring my Model M to use the right control key as the i3
 # modifier (since it doesn't have a Super key).
-xmodmap ~/.config/X11/Xmodmap
+# Apparently, changing the keyboard layout is the hardest problem in computer
+# science so it doesn't work reliably. Just fucking spam that stupid Xorg
+# server with requests for a few seconds.
+timeout 20s bash -c 'until xmodmap ~/.config/X11/Xmodmap; do true; done' &
 
 # Delay in milliseconds, repeat rate in Hz
 xset r rate 220 40

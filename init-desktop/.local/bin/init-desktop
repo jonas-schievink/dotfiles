@@ -24,3 +24,5 @@ mpd
 # When installed, start the NetworkManager applet
 nm-applet &
 
+blueman-applet &
+
