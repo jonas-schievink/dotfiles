@@ -8,8 +8,14 @@
 ;=====================================================
 
 [colors]
-background = ${colors.base02}
-background-alt = ${colors.base03}
+# -alt version are a bit brighter
+# Solarized dark
+#background = ${colors.base02}
+#background-alt = ${colors.base03}
+# Solarized light
+background = ${colors.base3}
+background-alt = ${colors.base2}
+
 foreground = ${colors.base1}
 foreground-alt = ${colors.base0}
 alert = ${colors.red}
@@ -184,8 +190,8 @@ label-mode-padding = 3
 ;   %output%
 ; Default: %icon%  %name%
 label-focused = %icon%%name%
-label-focused-foreground = ${colors.base2}
-#label-focused-background = ${colors.base03}
+label-focused-foreground = ${colors.foreground-alt}
+label-focused-background = ${colors.background-alt}
 label-focused-underline = ${colors.yellow}
 label-focused-padding = 3
 

@@ -34,10 +34,17 @@ filter_unmatched_urls = true
 [colors]
 
 # special
-foreground      = #93a1a1
-foreground_bold = #93a1a1
-cursor          = #657b83
-background      = #002b36
+# Solarized dark
+#foreground      = #93a1a1
+#foreground_bold = #93a1a1
+#cursor          = #657b83
+#background      = #002b36
+
+# Solarized light
+foreground      = #586e75
+foreground_bold = #586e75
+cursor          = #586e75
+background      = #fdf6e3
 
 # black
 color0  = #002b36
@@ -69,6 +76,8 @@ color14 = #2aa198
 
 # white
 color7  = #93a1a1
-color15 = #fdf6e3
+#color15 = #fdf6e3  # ! same as light background
+#color15 = #eee8d5  # ! almost unreadable on light bg
+color15 = #93a1a1
 
 # vim: ft=dosini cms=#%s
