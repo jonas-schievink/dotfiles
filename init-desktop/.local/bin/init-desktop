@@ -18,6 +18,8 @@ done
 pasystray &
 mpd
 
+init-jack
+
 # Start a notification server
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
