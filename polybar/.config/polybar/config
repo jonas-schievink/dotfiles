@@ -119,9 +119,8 @@ module-margin-right = 0
 
 font-0 = monospace:pixelsize=10;1
 font-1 = Noto Sans Symbols:pixelsize=10;1
-font-2 = Noto Emoji:pixelsize=10;1
-font-3 = Powerline Symbols:pixelsize=10;1
-font-4 = Noto Sans Symbols 2:pixelsize=10;1
+font-2 = Powerline Symbols:pixelsize=10;1
+font-3 = Noto Sans Symbols 2:pixelsize=10;1
 
 modules-left = 
 modules-center = i3
