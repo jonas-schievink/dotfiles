@@ -90,8 +90,8 @@ font-1 = Noto Sans Symbols:pixelsize=10;1
 font-2 = Powerline Symbols:pixelsize=10;1
 font-3 = Noto Sans Symbols 2:pixelsize=10;1
 
-#modules-left = volume mpd
-modules-left = mpd
+modules-left = volume mpd
+#modules-left = mpd
 modules-center = i3
 modules-right = filesystem memory cpu temperature date
 
