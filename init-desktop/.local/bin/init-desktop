@@ -18,7 +18,9 @@ done
 pasystray &
 mpd
 
-init-jack
+# Jack disabled because it fucks up the whole kernel after suspend.
+# "task kworker blocked for more than 120 seconds."
+#init-jack
 
 # Start a notification server
 /usr/lib/xfce4/notifyd/xfce4-notifyd &
