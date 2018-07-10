@@ -19,7 +19,8 @@ init-desktop &
 # "No Tears"
 # Curiously, `-b` to daemonize compton doesn't work and gives GL errors
 # FIXME: Disable rgb10 configs, see https://github.com/chjj/compton/issues/477
-allow_rgb10_configs=false compton --no-fading-openclose &
+# compton causes low performance and stuttering with RetroArch, so disable it for now
+#allow_rgb10_configs=false compton --no-fading-openclose &
 
 # FIXME: Does unclutter work on Wayland? If not, get a replacement!
 # Without -noevents, Chrome stops reacting to scroll events when the cursor is
