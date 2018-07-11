@@ -8,4 +8,10 @@
 	editor = nvim
 	excludesfile = /home/jonas/.config/git/gitignore
 [rerere]
-	enabled = true
+    enabled = true
+
+[sendemail]
+    smtpserver = smtp.gmail.com
+    smtpserverport = 587
+    smtpencryption = tls
+    smtpuser = jonasschievink@gmail.com
