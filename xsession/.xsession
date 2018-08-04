@@ -17,8 +17,6 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/smith.socket"
 # make scrolling nicer
 export MOZ_USE_XINPUT2=1
 
-export CARGO_INCREMENTAL=1
-
 export ASEPRITE_ACCEPT_EULA=yes
 
 # XDG directory support
