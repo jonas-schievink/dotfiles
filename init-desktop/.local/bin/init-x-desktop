@@ -22,6 +22,14 @@ init-desktop &
 # compton causes low performance and stuttering with RetroArch, so disable it for now
 #allow_rgb10_configs=false compton --no-fading-openclose &
 
+# Start a host and monitor specific polybar
+POLYBAR="polybar --reload"  # auto-reload config on change
+for monitor in $(xrandr --listmonitors | tail -n +2 | awk '{print $NF}'); do
+    bar="$(hostname)-$monitor"
+    echo "Starting polybar '$bar'"
+    $POLYBAR "$bar" &
+done
+
 # FIXME: Does unclutter work on Wayland? If not, get a replacement!
 # Without -noevents, Chrome stops reacting to scroll events when the cursor is
 # hidden.

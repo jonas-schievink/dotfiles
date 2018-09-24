@@ -7,14 +7,6 @@
 # Should be kept X11/Wayland agnostic.
 # Basically, an "Autostart" file.
 
-# Start a host and monitor specific polybar
-POLYBAR="polybar --reload"  # auto-reload config on change
-for monitor in $(xrandr --listmonitors | tail -n +2 | awk '{print $NF}'); do
-    bar="$(hostname)-$monitor"
-    echo "Starting polybar '$bar'"
-    $POLYBAR "$bar" &
-done
-
 # Host-local initialization
 local-$(hostname)
 
