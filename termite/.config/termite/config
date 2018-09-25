@@ -35,16 +35,16 @@ filter_unmatched_urls = true
 
 # special
 # Solarized dark
-#foreground      = #93a1a1
-#foreground_bold = #93a1a1
-#cursor          = #657b83
-#background      = #002b36
+foreground      = #93a1a1
+foreground_bold = #93a1a1
+cursor          = #657b83
+background      = #002b36
 
 # Solarized light
-foreground      = #586e75
-foreground_bold = #586e75
-cursor          = #586e75
-background      = #fdf6e3
+#foreground      = #586e75
+#foreground_bold = #586e75
+#cursor          = #586e75
+#background      = #fdf6e3
 
 # black
 color0  = #002b36
