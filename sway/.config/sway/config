@@ -14,10 +14,13 @@ set $term termite
 # Your preferred application launcher
 set $menu rofi -show drun
 
-font Noto Mono 8
+font monospace 8
 
 gaps inner 10
 gaps outer 5
+
+new_float normal 5
+new_window pixel 2
 
 ### Output configuration
 #
@@ -42,7 +45,7 @@ output * bg /usr/share/archlinux/wallpaper/archlinux-simplyblack.png fill
     # Despite the name, also works for non-floating windows.
     # Change normal to inverse to use left mouse button for resizing and right
     # mouse button for dragging.
-    floating_modifier $mod normal
+    floating_modifier $mod
 
     # reload the configuration file
     bindsym $mod+Shift+c reload
