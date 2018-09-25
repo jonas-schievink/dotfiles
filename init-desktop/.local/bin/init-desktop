@@ -15,6 +15,9 @@ for monitor in $(xrandr --listmonitors | tail -n +2 | awk '{print $NF}'); do
     $POLYBAR "$bar" &
 done
 
+# Host-local initialization
+local-$(hostname)
+
 pasystray &
 mpd
 
