@@ -45,5 +45,7 @@ xset r rate 220 40
 
 redshift -l 52.283333:8.05 &
 
+xsetroot -solid black
+
 (sleep 60 && rm "$LOGFILE") &
 
