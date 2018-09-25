@@ -15,3 +15,7 @@
     smtpserverport = 587
     smtpencryption = tls
     smtpuser = jonasschievink@gmail.com
+[pull]
+	rebase = true
+[rebase]
+	autostash = true
