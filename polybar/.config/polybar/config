@@ -8,13 +8,14 @@
 ;=====================================================
 
 [colors]
-# -alt version are a bit brighter
-# Solarized dark
-#background = ${colors.base02}
-#background-alt = ${colors.base03}
-# Solarized light
-background = ${colors.base3}
-background-alt = ${colors.base2}
+###  Solarized dark  ###
+background = ${colors.base02}
+background-alt = ${colors.base03}
+###  Solarized light  ###
+#background = ${colors.base3}
+#background-alt = ${colors.base2}
+
+# (-alt version are a bit brighter)
 
 foreground = ${colors.base1}
 foreground-alt = ${colors.base0}
@@ -37,6 +38,8 @@ violet =    #6c71c4
 blue =      #268bd2
 cyan =      #2aa198
 green =     #859900
+
+###  Computer Configuration: arch-surface  ###
 
 [bar/arch-surface-eDP-1]
 monitor = eDP-1
@@ -66,6 +69,8 @@ modules-right = memory cpu surface-temperature battery wlan date
 tray-position = right
 tray-padding = 4
 
+###  Computer Configuration: archbox  ###
+
 # Primary monitor
 [bar/archbox-HDMI-A-2]
 monitor = HDMI-A-2
@@ -91,7 +96,6 @@ font-2 = Powerline Symbols:pixelsize=10;1
 font-3 = Noto Sans Symbols 2:pixelsize=10;1
 
 modules-left = volume mpd
-#modules-left = mpd
 modules-center = i3
 modules-right = filesystem memory cpu temperature date
 
@@ -125,6 +129,71 @@ font-3 = Noto Sans Symbols 2:pixelsize=10;1
 modules-left = 
 modules-center = i3
 modules-right = date
+
+
+###  Computer Configuration: 1arch  ###
+
+# Primary monitor
+[bar/1arch-DP-0]
+monitor = DP-0
+width = 100%
+height = 21
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 0
+
+font-0 = monospace:pixelsize=10;1
+font-1 = Noto Sans Symbols:pixelsize=10;1
+font-2 = Powerline Symbols:pixelsize=10;1
+font-3 = Noto Sans Symbols 2:pixelsize=10;1
+
+modules-left = volume
+modules-center = i3
+modules-right = filesystem memory cpu temperature date
+
+tray-position = right
+tray-padding = 2
+
+# Secondary monitor
+[bar/1arch-HDMI-0]
+monitor = HDMI-0
+width = 100%
+height = 21
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+padding-left = 1
+padding-right = 1
+
+module-margin-left = 2
+module-margin-right = 0
+
+font-0 = monospace:pixelsize=10;1
+font-1 = Noto Sans Symbols:pixelsize=10;1
+font-2 = Powerline Symbols:pixelsize=10;1
+font-3 = Noto Sans Symbols 2:pixelsize=10;1
+
+modules-left = 
+modules-center = i3
+modules-right = date
+
+
+###  Modules  ###
 
 [module/filesystem]
 type = internal/fs
