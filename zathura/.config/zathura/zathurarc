@@ -1,20 +1,27 @@
-# Default: s
-# v enables the vertical scroll bar
-set guioptions sv
+#### General Configuration ####
 
-# Copy to Ctrl+V clipboard, not middle mouse button clipboard
+# v enables the vertical scroll bar
+set guioptions sv  # default: s
+
+# copy to Ctrl+V clipboard, not middle mouse button clipboard
 set selection-clipboard clipboard
 
-set smooth-scroll true
+set smooth-scroll true  # smooth scrolling via touchpad
 
+#### Keybindings ####
+
+map <A-Left>  jumplist backward  # pos before last navigation
+map <A-Right> jumplist forward   # pos after next navigation
+
+#### Colors ####
 
 #set recolor true
 
 # Solarized dark
-set recolor-darkcolor "#839496"
-set recolor-lightcolor "#002b36"
+#set recolor-darkcolor "#839496"
+#set recolor-lightcolor "#002b36"
 
 # Solarized light
-#set recolor-darkcolor  "#657b83"
-#set recolor-lightcolor "#fdf6e3"
+set recolor-darkcolor  "#657b83"
+set recolor-lightcolor "#fdf6e3"
 
