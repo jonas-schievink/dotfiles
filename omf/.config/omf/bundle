@@ -1,0 +1,3 @@
+package foreign-env
+theme default
+theme simple-ass-prompt
