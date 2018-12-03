@@ -40,4 +40,5 @@
     },
     "extensions.autoUpdate": false,
     "files.hotExit": "off",
+    "window.titleBarStyle": "custom",
 }
