@@ -32,10 +32,12 @@ call plug#begin('~/.local/share/vim/plugged')
 
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
-Plug 'lervag/vimtex'
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Language support plugins
+Plug 'lervag/vimtex'
+Plug 'qnighy/lalrpop.vim'
 
 call plug#end()
 
