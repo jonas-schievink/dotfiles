@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+set -o errexit
+
+if [[ "$#" -eq 0 ]]; then
+    echo >&2 "usage: snap <mode> [dir]"
+    echo >&2 ""
+    echo >&2 "mode:"
+    echo >&2 "  select - use the mouse to select an area to screenshot"
+    echo >&2 "  full   - screenshot the whole X display (all monitors)"
+    echo >&2 'dir: directory to place file in (default: $XDG_PICTURES_DIR/Screenshots)'
+    exit 1
+fi
+
+case $1 in
+    select)
+        maim_args="-s"
+        ;;
+    full)
+        maim_args=""
+        ;;
+esac
+
+target_dir=${2-${XDG_PICTURES_DIR-"$HOME/Pictures"}/Screenshots}
+target_file="$target_dir/screenshot-$(date '+%Y-%m-%d-%H:%M:%S').png"
+
+echo "target file: $target_file"
+echo "invoking maim"
+maim $maim_args "$target_file"
+
