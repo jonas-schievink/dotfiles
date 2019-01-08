@@ -38,7 +38,7 @@ filter_unmatched_urls = true
 foreground      = #93a1a1
 foreground_bold = #93a1a1
 cursor          = #657b83
-background      = #002b36
+background      = rgba(0x00, 0x2b, 0x36, 0.95)
 
 # Solarized light
 #foreground      = #586e75
