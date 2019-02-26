@@ -26,5 +26,5 @@ target_file="$target_dir/screenshot-$(date '+%Y-%m-%d-%H:%M:%S').png"
 
 echo "target file: $target_file"
 echo "invoking maim"
-maim $maim_args "$target_file"
+maim $maim_args -u "$target_file"
 
