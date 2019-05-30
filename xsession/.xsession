@@ -12,6 +12,7 @@ export VISUAL="$EDITOR"
 
 export ANDROID_HOME="/opt/android-sdk"
 export NDK_HOME="/opt/android-ndk"
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=gasp'
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/smith.socket"
 
