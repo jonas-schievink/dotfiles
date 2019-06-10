@@ -42,4 +42,10 @@
     "files.hotExit": "off",
     "window.titleBarStyle": "custom",
     "files.trimTrailingWhitespace": true,
+    "workbench.enableExperiments": false,
+    "update.enableWindowsBackgroundUpdates": false,
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "editor.renderFinalNewline": false,
 }
